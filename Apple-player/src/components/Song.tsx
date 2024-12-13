@@ -35,7 +35,7 @@ function Song() {
 
 	const getSongs = async () => {
 		try {
-			const call = await fetch(`${API}queen&8`);
+			const call = await fetch(`${API}queen`);
 			if (call.ok) {
 				const resp = await call.json();
 				const limitedSongs = resp.data.slice(0, 8);

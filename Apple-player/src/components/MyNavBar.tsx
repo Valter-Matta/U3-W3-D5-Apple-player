@@ -11,6 +11,9 @@ import { TiNews } from "react-icons/ti";
 import { useDispatch, useSelector } from "react-redux";
 
 interface initialState {
+	main: {
+		songs: Track;
+	};
 	search: {
 		input: "";
 	};
