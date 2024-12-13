@@ -1,42 +1,35 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+	background-color: #1f1f1f;
+}
+.mynav {
+	background-color: rgba(46, 46, 46, 0.2) !important;
+}
+.hamburger span,
+.hamburger button {
+	font-size: 1rem;
+	fill: red !important;
+	color: red !important;
+	background-color: red;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.hamburger span:hover {
+	border: 2px solid white;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar-item a:hover {
+	color: #ff4d4d;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.footer-links a:hover {
+	color: #ff4d4d;
 }
 
-.card {
-  padding: 2em;
+.player {
+	background-color: #4d4d4d;
+	height: 50px;
 }
 
-.read-the-docs {
-  color: #888;
+.custom-placeholder::placeholder {
+	color: #4d4d4d !important; /* Forza l'applicazione del colore */
+	opacity: 1; /* Assicura che il colore sia visibile */
 }
