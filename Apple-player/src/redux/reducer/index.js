@@ -25,7 +25,7 @@ const mainReducer = (state = initialState, action) => {
 				...state,
 				search: {
 					...state.search,
-					input: state.search.input + state.action.payload,
+					input: action.payload,
 				},
 			};
 		default:

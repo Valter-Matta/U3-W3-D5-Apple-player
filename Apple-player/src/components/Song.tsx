@@ -33,9 +33,13 @@ function Song() {
 		return state.main.songs;
 	});
 
+	const query = useSelector((state: initialState) => {
+		return state.search.input;
+	});
+
 	const getSongs = async () => {
 		try {
-			const call = await fetch(`${API}queen`);
+			const call = await fetch(`${API}${query === "" ? "queen" : query}`);
 			if (call.ok) {
 				const resp = await call.json();
 				const limitedSongs = resp.data.slice(0, 8);
@@ -52,7 +56,7 @@ function Song() {
 	};
 	useEffect(() => {
 		getSongs();
-	}, []);
+	}, [query]);
 
 	return arrOfSongs.map((s: ISongs) => (
 		<div className="col-6 col-md-4 col-lg-3 m-0 p-2" key={s.album.id}>
